@@ -1,11 +1,11 @@
 :root {
-    --bg-principal: #0b0c10;
-    --bg-card: #161822;
-    --cor-destaque: #bd93f9; /* Roxo espacial */
-    --cor-secundaria: #ff79c6;
-    --verde-match: #50fa7b;
-    --texto-branco: #f8f8f2;
-    --texto-cinza: #a1a6b4;
+    --bg-principal: #1E1D1B; /* Cinza escuro de tinta/fundo antigo */
+    --bg-card: #282623;      /* Tom de card escuro envelhecido */
+    --cor-destaque: #CAB38D; /* Tom pergaminho / papel antigo */
+    --cor-secundaria: #A8936E;/* Variação mais fechada do pergaminho */
+    --verde-match: #8A9A86;  /* Verde musgo suave/vintage */
+    --texto-branco: #F2EFE9; /* Tom de papel claro/marfim */
+    --texto-cinza: #A39E93;  /* Cinza acastanhado estilo texto antigo */
 }
 
 * {
@@ -28,13 +28,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 18px 4%;
-    background: rgba(11, 12, 16, 0.85);
+    background: rgba(30, 29, 27, 0.88);
     backdrop-filter: blur(12px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(202, 179, 141, 0.12);
 }
 
 .nav-esquerda {
@@ -68,7 +68,7 @@ body {
 }
 
 .perfil-badge {
-    background: rgba(189, 147, 249, 0.15);
+    background: rgba(202, 179, 141, 0.12);
     border: 1px solid var(--cor-destaque);
     color: var(--cor-destaque);
     padding: 6px 14px;
@@ -90,8 +90,8 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, #0b0c10 25%, rgba(11,12,16,0.6) 65%, transparent 100%),
-                linear-gradient(0deg, #0b0c10 5%, transparent 40%);
+    background: linear-gradient(90deg, #1E1D1B 25%, rgba(30,29,27,0.7) 65%, transparent 100%),
+                linear-gradient(0deg, #1E1D1B 5%, transparent 40%);
 }
 
 .hero-content {
@@ -157,22 +157,22 @@ body {
 
 .btn-primario {
     background-color: var(--cor-destaque);
-    color: #0b0c10;
+    color: #1E1D1B;
 }
 
 .btn-primario:hover {
-    background-color: #d2b4fc;
+    background-color: #dbc9a9;
     transform: translateY(-2px);
 }
 
 .btn-secundario {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(242, 239, 233, 0.08);
     color: var(--texto-branco);
     backdrop-filter: blur(5px);
 }
 
 .btn-secundario:hover {
-    background-color: rgba(255, 255, 255, 0.22);
+    background-color: rgba(242, 239, 233, 0.16);
 }
 
 /* DIVISÕES DE CATEGORIAS */
@@ -180,7 +180,7 @@ body {
     padding: 10px 4% 60px;
     position: relative;
     z-index: 5;
-    margin-top: -50px; /* Sobrepõe levemente o banner como na Netflix */
+    margin-top: -50px;
 }
 
 .sessao-categoria {
@@ -193,7 +193,7 @@ body {
     align-items: flex-end;
     margin-bottom: 18px;
     padding-bottom: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(242, 239, 233, 0.08);
 }
 
 .cabecalho-categoria h3 {
@@ -234,7 +234,8 @@ body {
     border-radius: 8px;
     overflow: hidden;
     background-color: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(242, 239, 233, 0.07);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
@@ -258,7 +259,7 @@ body {
     top: 12px;
     right: 12px;
     background: var(--cor-destaque);
-    color: #0b0c10;
+    color: #1E1D1B;
     font-size: 10px;
     font-weight: 900;
     padding: 4px 8px;
@@ -271,7 +272,7 @@ body {
 .card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(11, 12, 16, 0.98) 15%, rgba(11, 12, 16, 0.7) 55%, transparent 100%);
+    background: linear-gradient(to top, rgba(30, 29, 27, 0.98) 15%, rgba(30, 29, 27, 0.7) 55%, transparent 100%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -310,7 +311,7 @@ body {
 }
 
 .btn-card {
-    background: rgba(189, 147, 249, 0.2);
+    background: rgba(202, 179, 141, 0.2);
     border: 1px solid var(--cor-destaque);
     color: var(--cor-destaque);
     text-align: center;
@@ -326,7 +327,7 @@ body {
 /* EFEITOS QUANDO PASSA O MOUSE NA DIV DO FILME */
 .filme-card:hover {
     transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.8), 0 0 15px rgba(189, 147, 249, 0.2);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.8), 0 0 15px rgba(202, 179, 141, 0.25);
     border-color: var(--cor-destaque);
     z-index: 10;
 }
@@ -346,7 +347,7 @@ body {
    ========================================== */
 .banner-filme {
     height: 45vh;
-    background: linear-gradient(to bottom, rgba(11,12,16,0.3), var(--bg-principal)),
+    background: linear-gradient(to bottom, rgba(30,29,27,0.3), var(--bg-principal)),
                 url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80') center/cover;
 }
 
@@ -368,7 +369,7 @@ body {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.8);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(242,239,233,0.1);
 }
 
 .ficha-tecnica {
@@ -376,7 +377,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(242,239,233,0.05);
 }
 
 .ficha-tecnica h4 {
@@ -409,7 +410,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     margin-top: 25px;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(242,239,233,0.05);
 }
 
 .bloco-artigo h3 {
@@ -422,7 +423,7 @@ body {
 }
 
 .bloco-artigo p {
-    color: #d1d5db;
+    color: #C8C3B9;
     line-height: 1.75;
     font-size: 15px;
     margin-bottom: 15px;
@@ -431,7 +432,7 @@ body {
 .rodape {
     text-align: center;
     padding: 30px;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(242,239,233,0.06);
     color: var(--texto-cinza);
     font-size: 13px;
 }
